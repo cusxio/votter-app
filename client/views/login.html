@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="container login-container">
+        <div class="jumbotron">
+            <form class="form-horizontal" name="login.loginForm" ng-submit="login.submit()" novalidate>
+                <fieldset>
+                    <legend><i class="icon ion-ios-compose"></i> Log In</legend>
+                    <div class="form-group" ng-class="{ 'has-error': login.loginForm.email.$invalid && login.loginForm.email.$dirty }">
+                        <label for="inputEmail" class="control-label"><i class="icon ion-ios-email"></i> Email</label>
+                        <div class="col-lg-10">
+                            <input server-error type="email" class="form-control" id="inputEmail" name="email" ng-model="login.email" placeholder="your@email.com" required autofocus>
+                        </div>
+                        <div class="col-lg-10">
+                            <div ng-if="login.loginForm.email.$dirty" ng-messages="login.loginForm.email.$error">
+                                <div ng-message="required" class="text-danger danger"> Please enter your email</div>
+                                <div ng-message="email" class="text-danger danger"> Please enter a valid email</div>
+                                <div ng-message="server" class="text-danger">{{login.errorMessage.email}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': login.loginForm.password.$invalid && login.loginForm.password.$dirty }">
+                        <label for="inputPassword" class="control-label"><i class="icon ion-locked"></i> Password</label>
+                        <div class="col-lg-10">
+                            <input server-error type="password" name="password" class="form-control" id="inputPassword" ng-model="login.password" placeholder="Password" required>
+                        </div>
+                        <div class="col-lg-10">
+                            <div ng-if="login.loginForm.password.$dirty" ng-messages="login.loginForm.password.$error">
+                                <div ng-message="required" class="text-danger danger"> Please enter your password</div>
+                                <div ng-message="server" class="text-danger">{{login.errorMessage.password}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success">LOG IN</button>
+                </fieldset>
+                <p class="text-center text-muted signup-question">
+                    <small>Don't have an account ?<a href="#/signup"> Sign Up</a></small>
+                </p>
+                <div class="signup-or-separator">
+                    <h6 class="text">or</h6>
+                    <hr>
+                </div>
+            </form>
+<!--             <a href="#" class="btn btn-info"><i class="icon ion-social-facebook"></i> Log In with <em>Facebook</em></a> -->
+            <a ng-click="login.authenticate('google')" class="btn btn-info"><i class="icon ion-social-googleplus"></i> Log In with <em>Google</em></a>
+<!--             <a href="#" class="btn btn-info"><i class="icon ion-social-twitter"></i> Log In with <em>Twitter</em></a> -->
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container create-container">
+    <ul class="breadcrumb">
+        <li><a href="#/user">Profile</a></li>
+        <li class="active">Create</li>
+    </ul>
+    <div class="well">
+        <form class="form-horizontal" novalidate name="createForm">
+            <fieldset>
+                <legend>
+                    <h4><em class="home-brand-list pulse animation"> Votter </em><i class="icon ion-flash pulse animation"></i> Poll</h4></legend>
+                <div class="form-group">
+                    <label for="inputQuestion" class="col-lg-2 control-label">Question: </label>
+                    <div class="col-lg-10">
+                        <input ng-model="create.poll.question" type="text" class="form-control" id="inputQuestion" placeholder="Please type a Question..." name="question" required>
+                        <div ng-messages="createForm.question.$error" ng-if="createForm.question.$dirty">
+                            <div ng-message="required" class="text-danger danger"> Please type a question</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSelection" class="col-lg-2 control-label">Choices: </label>
+                    <div class="col-lg-10">
+                        <input name="selection" class="form-control" ng-repeat="selection in create.poll.choices" id="inputSelection" type="text" placeholder="Please type a Choice..." ng-model="selection.text" required>
+                        <div ng-messages="createForm.selection.$error" ng-if="createForm.selection.$dirty">
+                            <div ng-message="required" class="text-danger danger"> Please type a choice</div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <a ng-class="{'disabled': createForm.selection.$invalid }" ng-click="create.addChoice()" class="btn btn-info">Add Options</a>
+        <a ng-class="{'disabled': createForm.$invalid }" ng-click="create.fire()" class="btn btn-info">Fire</a>
+        <a ng-class="{'disabled': createForm.$invalid }" class="btn btn-success" ng-href="#/{{create.creator}}" ng-click="create.submit()">Create <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Poll</a>
+    </div>
+</div>

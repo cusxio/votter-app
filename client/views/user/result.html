@@ -1,0 +1,20 @@
+<div ng-if="result.isAuthenticated()" class="container result-container">
+    <ul class="breadcrumb">
+        <li><a href="#/{{result.creator}}">Profile</a></li>
+        <li><a href="#/{{result.creator}}/{{result.link}}">Poll</a></li>
+        <li class="active">Result</li>
+    </ul>
+    <div class="well">
+        <h2>Result</h2>
+        <h3>{{result.question}}</h3>
+            <canvas id="pie" class="chart chart-pie" data="result.data" labels="result.labels" legend="true" colours="result.colors"></canvas>
+    </div>
+</div>
+
+
+<div ng-if="!result.isAuthenticated()" class="container result-container">
+
+    <div class="well">
+        <h2>{{result.unAuthenticated}}</h2>
+    </div>
+</div>

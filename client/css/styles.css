@@ -1,0 +1,265 @@
+.home-view.ng-enter {
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1s; }
+
+.list-animation.ng-enter {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  transition: 1s;
+  opacity: 0; }
+
+.list-animation.ng-enter-stagger {
+  transition-delay: 0.2s; }
+
+.list-animation.ng-enter.ng-enter-active {
+  opacity: 1; }
+
+.list-animation.ng-leave {
+  -webkit-animation: bounceOut 1s;
+  -moz-animation: bounceOut 1s;
+  -ms-animation: bounceOut 1s;
+  animation: bounceOut 1s; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s; }
+
+.animation {
+  -webkit-animation-iteration-count: infinite; }
+
+.home-jumbo {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 5em; }
+  .home-jumbo h1 {
+    text-decoration: underline; }
+
+.ion-flash {
+  color: #FEF234;
+  margin-right: 2px; }
+
+.ion-ios-heart {
+  color: #F82876; }
+
+.ion-ios-people {
+  color: #FFFFFF; }
+
+.home-container {
+  text-align: center; }
+
+.home-container-panel {
+  margin-top: 20px; }
+  .home-container-panel .panel-heading {
+    font-size: 2em;
+    font-weight: 100; }
+  .home-container-panel .panel-body {
+    font-size: 1.2em;
+    line-height: 2em; }
+    .home-container-panel .panel-body em {
+      font-style: normal;
+      text-decoration: underline;
+      font-weight: bold; }
+
+.home-list-group {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 2em;
+  font-size: 1.2em;
+  text-align: center; }
+  .home-list-group em {
+    font-style: normal;
+    font-weight: bold; }
+
+.home-brand-list {
+  text-decoration: underline; }
+
+.home-button {
+  margin-top: 2em; }
+
+.danger {
+  position: relative;
+  top: 8px; }
+
+.signup-container label, .login-container label {
+  position: relative;
+  left: 15px;
+  padding-bottom: 10px;
+  display: block;
+  font-weight: normal; }
+
+.signup-container legend, .login-container legend {
+  text-align: center;
+  font-size: 2.5em; }
+
+.signup-container .btn-success, .signup-container .btn-info, .login-container .btn-success, .login-container .btn-info {
+  width: 100%;
+  display: block;
+  margin-top: 2em; }
+  .signup-container .btn-success em, .signup-container .btn-info em, .login-container .btn-success em, .login-container .btn-info em {
+    text-decoration: none;
+    font-weight: bold;
+    font-style: normal; }
+  .signup-container .btn-success .icon, .signup-container .btn-info .icon, .login-container .btn-success .icon, .login-container .btn-info .icon {
+    font-size: 1em;
+    margin-right: 10px; }
+
+.signup-container p, .login-container p {
+  margin-top: 2em;
+  font-size: 1em; }
+
+.signup-container .jumbotron, .login-container .jumbotron {
+  padding-top: 1em;
+  margin-top: 4em; }
+
+.signup-or-separator {
+  position: relative;
+  height: 29px;
+  margin: 5px 0;
+  text-align: center;
+  background: none; }
+
+.signup-or-separator hr {
+  width: 40%;
+  margin: 3px auto 10px auto;
+  border-top: 1px solid #dce0e0; }
+
+.signup-or-separator .text {
+  display: inline-block;
+  padding: 8px;
+  margin: 0; }
+
+.profile-container em, .create-container em, .poll-container em, .edit-container em {
+  font-weight: 900; }
+
+.profile-container .well, .create-container .well, .poll-container .well, .edit-container .well {
+  padding-bottom: 40px; }
+
+.profile-container a.btn, .create-container a.btn, .poll-container a.btn, .edit-container a.btn {
+  font-size: 18px;
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+  text-transform: uppercase; }
+
+.profile-container .list-group {
+  margin-top: 20px; }
+
+.profile-container .badge {
+  background-color: #F51C40; }
+
+.profile-container span:hover {
+  cursor: pointer; }
+
+.create-container h4, .edit-container h4 {
+  text-align: center;
+  font-size: 40px; }
+
+.create-container form, .edit-container form {
+  margin: 0 auto;
+  width: 60%; }
+  .create-container form input, .edit-container form input {
+    margin-top: 10px; }
+
+.edit-container h3 {
+  text-align: center;
+  font-weight: 900; }
+
+.poll-container h2 {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.poll-container h3 {
+  font-weight: 300; }
+
+.poll-container h2, .poll-container h3 {
+  text-align: center; }
+
+.poll-container hr {
+  border-color: white;
+  opacity: 0.5; }
+
+.poll-container .form-group > label {
+  font-size: 2em;
+  text-transform: uppercase; }
+
+.poll-container .radio label {
+  font-size: 1.2em; }
+
+.result-container h2 {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.result-container h3 {
+  font-weight: 300; }
+
+.result-container h2, .result-container h3 {
+  text-align: center; }
+
+.result-container canvas {
+  margin-top: 2em; }
+
+.result-container .pie-legend {
+  margin-top: 1.5em;
+  font-size: 1.5em; }
+
+@media screen and (min-width: 320px) {
+  .signup-container, .login-container {
+    margin: 0 auto;
+    padding: 0; }
+    .signup-container .jumbotron, .login-container .jumbotron {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+@media screen and (min-width: 480px) {
+  .signup-container, .login-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0; }
+    .signup-container .jumbotron, .login-container .jumbotron {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+@media screen and (min-width: 600px) {
+  .signup-container, .login-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0; }
+    .signup-container .jumbotron, .login-container .jumbotron {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: left; } }
+
+@media screen and (min-width: 1000px) {
+  .signup-container, .login-container {
+    width: 40%;
+    margin: 0 auto;
+    padding: 0; }
+    .signup-container .jumbotron, .login-container .jumbotron {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+@media screen and (min-width: 1200px) {
+  .signup-container, .login-container {
+    width: 40%;
+    margin: 0 auto;
+    padding: 0; }
+    .signup-container input[type], .login-container input[type] {
+      width: 414px;
+      box-sizing: border-box; }
+    .signup-container .jumbotron, .login-container .jumbotron {
+      padding-left: 20px;
+      padding-right: 20px; } }

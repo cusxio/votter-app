@@ -1,0 +1,26 @@
+<div class="container profile-container">
+    <ul class="breadcrumb">
+        <li class="active">Profile</li>
+    </ul>
+    <div class="well">
+        <h4>Do you want to....</h4>
+        <a href="#/{{profile.username}}/create" class="btn btn-success">Create a new <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Poll</a>
+        <h5 class="text-muted text-center">or</h5>
+        <a ng-click="profile.deleteButton()" class="btn btn-warning">Delete an existing <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Poll</a>
+    </div>
+    <div class="well">
+        <h4>List of <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Polls</h4>
+        <h1 ng-if="profile.polls.length == 0" class="text-center text-muted">Currently, you have no created <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Polls</h1>
+        <ul class="list-group" ng-animate-children>
+            <li class="list-group-item list-animation" ng-repeat="poll in profile.polls">
+                <span class="badge" ng-if="profile.delete"><a ng-click="profile.deletePoll($index,poll.link)">X</a></span><a ng-href="#/{{profile.username}}/{{poll.link}}">{{poll.title}}</a>
+            </li>
+            <!--             <li class="list-group-item">
+                <span class="badge">X</span><a href="">Poll 2</a>
+            </li>
+            <li class="list-group-item">
+                <span class="badge">X</span><a href="">Poll 3</a>
+            </li> -->
+        </ul>
+    </div>
+</div>

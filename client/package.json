@@ -1,0 +1,27 @@
+{
+  "name": "votter",
+  "version": "0.0.1",
+  "description": "votter app ",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cusxio/votter-app.git"
+  },
+  "keywords": [
+    "angular",
+    "mean"
+  ],
+  "author": "cusxio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cusxio/votter-app/issues"
+  },
+  "homepage": "https://github.com/cusxio/votter-app#readme",
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "gulp": "^3.9.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-watch": "^4.3.4"
+  }
+}

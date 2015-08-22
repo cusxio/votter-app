@@ -1,0 +1,26 @@
+<div class="container home-container">
+    <div class="jumbotron home-jumbo">
+        <h1 class="">Welcome to Votter <i class="icon ion-flash"></i></h1>
+        <div class="home-container-panel">
+            <div class="panel panel-default">
+                <div class="panel-heading">What is Votter ?</div>
+                <div class="panel-body">
+                    <em>Votter </em><i class="icon ion-flash"></i> is a place where you can <em>create</em> your own poll and <em>share</em> it with your friends and <em>love ones </em><i class="icon ion-ios-heart"></i> or even to <em>random stranger</em> <i class="icon ion-ios-people"></i>. You don't have to register in order to vote, but you have to register to create and keep track of your own poll.
+                </div>
+            </div>
+            <ul class="list-group home-list-group">
+                <li class="list-group-item">
+                    <em>Step 1:</em> Create your <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Poll
+                </li>
+                <li class="list-group-item">
+                    <em>Step 2:</em> Share your <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Poll
+                </li>
+                <li class="list-group-item">
+                    <em>Step 3:</em> View your <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Result
+                </li>
+            </ul>
+        </div>
+        <p><a ng-if="!home.isAuthenticated()" href="#/login" class="btn btn-primary btn-lg home-button">Get Started</a></p>
+        <p><a ng-if="home.isAuthenticated()" ng-href="#/{{home.username}}" class="btn btn-primary btn-lg home-button">Go to Profile</a></p>
+    </div>
+</div>

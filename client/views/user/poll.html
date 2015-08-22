@@ -1,0 +1,29 @@
+<div class="container poll-container">
+    <ul class="breadcrumb">
+        <li ng-if="poll.isAuthenticated()"><a href="#/{{poll.creator}}">Profile</a></li>
+        <li class="active">Poll</li>
+    </ul>
+    <div class="well">
+        <form class="class-horizontal">
+            <fieldset>
+                <h2>Question: </h2>
+                <h3>{{poll.question}}</h3>
+                <hr>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Choices:</label>
+                    <div class="col-lg-10">
+                        <div class="radio" ng-repeat="choice in poll.pollChoices">
+                            <label>
+                                <input type="radio" ng-value="choice" ng-model="poll.input">{{choice}}
+                            </label>
+                        </div>
+                    </div>
+            </fieldset>
+            <h3 ng-if="poll.input && poll.voteButton">Your Choice: {{poll.input}}</h3>
+            <a ng-if="!poll.voteButton" ng-disabled="!voteButton"class="btn btn-info">YOU HAVE VOTED</a>
+            <a ng-if="poll.voteButton" ng-href="#/{{poll.creator}}/{{poll.link}}/result" ng-click="poll.submit()" class="btn btn-success">VOTE</a>
+            <a ng-if="poll.isAuthenticated()" ng-href="#/{{poll.creator}}/{{poll.link}}/edit" class="btn btn-warning">EDIT</a>
+            <a ng-if="poll.isAuthenticated()" ng-href="#/{{poll.creator}}/{{poll.link}}/result" class="btn btn-danger">RESULT</a>
+        </form>
+        </div>
+    </div>

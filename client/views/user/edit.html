@@ -1,0 +1,35 @@
+<div class="container edit-container">
+    <ul class="breadcrumb">
+        <li><a href="#/{{edit.creator}}">Profile</a></li>
+        <li><a href="#/{{edit.creator}}/{{edit.link}}">Poll</a></li>
+        <li class="active">Edit</li>
+    </ul>
+    <div class="well">
+        <form class="form-horizontal" novalidate name="editForm">
+            <fieldset>
+                <legend>
+                    <h4><em class="home-brand-list pulse animation"> Votter </em><i class="icon ion-flash pulse animation"></i> Poll</h4>
+                    <h3 class="text-muted">EDIT</h3></legend>
+                <div class="form-group">
+                    <label for="inputQuestion" class="col-lg-2 control-label">Question: </label>
+                    <div class="col-lg-10">
+                        <input ng-model="edit.poll.question" type="text" class="form-control" id="inputQuestion" placeholder="Please type a Question..." name="question" required>
+                        <div ng-messages="editForm.question.$error" ng-if="editForm.question.$dirty">
+                            <div ng-message="required" class="text-danger danger"> Please type a question</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSelection" class="col-lg-2 control-label">Choices: </label>
+                    <div class="col-lg-10">
+                        <input name="selection" class="form-control" ng-repeat="selection in edit.poll.choices" id="inputSelection" type="text" placeholder="Please type a Choice..." ng-model="selection.text" required>
+                        <div ng-messages="editForm.selection.$error" ng-if="editForm.selection.$dirty">
+                            <div ng-message="required" class="text-danger danger"> Please type a choice</div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <a ng-class="{'disabled': editForm.$invalid }" class="btn btn-success" ng-click="edit.edit()" ng-href="#/{{edit.creator}}">edit <em class="home-brand-list"> Votter </em><i class="icon ion-flash"></i> Poll</a>
+    </div>
+</div>

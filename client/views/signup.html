@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="container signup-container">
+        <div class="jumbotron">
+            <form class="form-horizontal" ng-submit="signup.submit()" name="signupForm" novalidate>
+                <fieldset>
+                    <legend><i class="icon ion-ios-compose"></i> Sign Up</legend>
+                    <div class="form-group" ng-class="{ 'has-error': signupForm.email.$invalid && signupForm.email.$dirty, 'has-success': signupForm.email.$valid && signupForm.email.$dirty }">
+                        <label for="inputEmail" class="control-label"><i class="icon ion-ios-email"></i> Email</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="inputEmail" name="email" ng-model="signup.email" placeholder="your@email.com" email-available-validator>
+                        </div>
+                        <div class="col-lg-10">
+                            <div ng-if="signupForm.email.$dirty" ng-messages="signupForm.email.$error">
+                                <div ng-message="email" class="danger text-danger">Please enter a valid email</div>
+                                <div ng-message="emailAvailable" class="danger text-danger">This email has already been registered</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.password.$invalid && signupForm.password.$dirty }">
+                        <label for="inputPassword" class="control-label"><i class="icon ion-locked"></i> Password</label>
+                        <div class="col-lg-10">
+                            <input type="password" name="password" class="form-control" id="inputPassword" ng-model="signup.password" placeholder="Password" required>
+                        </div>
+                        <div class="col-lg-10">
+                            <div ng-if="signupForm.password.$dirty" ng-messages="signupForm.password.$error">
+                                <div ng-message="required" class="danger text-danger">Password needed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" ng-disabled="login.loginForm.$invalid">SIGN UP</button>
+                </fieldset>
+                <p class="text-center text-muted signup-question">
+                    <small>Already have an account ?<a href="#/login"> Log In</a></small>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
